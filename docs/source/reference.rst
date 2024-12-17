@@ -20,7 +20,7 @@ Nanobind automodule example
 .. todo::
 
    * :py:func:`add`'s documentation does not show up in automodule?
-   * add a nb_class
+   * :py:meth:`Bird.speak` does not show the typehints?
 
 
 Nanobind autofunction example
@@ -36,3 +36,7 @@ In ``help(nanobind_example)``, the function appears in the DATA section (?!)::
    DATA
     add = <nanobind.nb_func object>
         add(a: int, b: int) -> int
+
+
+.. autofunction:: nanobind_example.Bird.speak
+   :no-index:

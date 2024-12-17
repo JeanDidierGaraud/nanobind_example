@@ -1,4 +1,4 @@
-from .nanobind_example_ext import add, __doc__
+from .nanobind_example_ext import add, __doc__, Bird
 
 from .basic_py_example import repeat, Parrot
 
