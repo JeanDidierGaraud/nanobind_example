@@ -10,6 +10,10 @@ To build this documentation::
 
   pip install . && ( cd docs; make html; )
 
+.. todo::
+
+   Add requirements.txt
+
 
 .. toctree::
    :maxdepth: 2

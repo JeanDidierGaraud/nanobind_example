@@ -57,3 +57,15 @@ nanobind_add_module(
 
 # Install directive for scikit-build-core
 install(TARGETS nanobind_example_ext LIBRARY DESTINATION nanobind_example)
+
+# Stub is useful for editor's auto-completion and sphinx autodoc.
+nanobind_add_stub(
+  nanobind_example_ext_stub
+  MODULE nanobind_example_ext
+  OUTPUT nanobind_example_ext.pyi
+  PYTHON_PATH $<TARGET_FILE_DIR:nanobind_example_ext>
+  DEPENDS nanobind_example_ext
+  MARKER_FILE py.typed
+  )
+# fixme: why do I need to give prefix the build/cp312... ?
+install(FILES build/cp312-abi3-linux_x86_64/py.typed build/cp312-abi3-linux_x86_64/nanobind_example_ext.pyi DESTINATION nanobind_example)
