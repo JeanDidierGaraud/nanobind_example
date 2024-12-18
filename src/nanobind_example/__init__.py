@@ -1,4 +1,6 @@
 from .nanobind_example_ext import add, __doc__, Bird
+# force load stub (necessary until https://github.com/sphinx-doc/sphinx/issues/7630 is resolved):
+from ._nanobind_example_ext_stub import *
 
 from .basic_py_example import repeat, Parrot
 

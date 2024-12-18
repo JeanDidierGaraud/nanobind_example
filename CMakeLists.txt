@@ -62,10 +62,11 @@ install(TARGETS nanobind_example_ext LIBRARY DESTINATION nanobind_example)
 nanobind_add_stub(
   nanobind_example_ext_stub
   MODULE nanobind_example_ext
-  OUTPUT nanobind_example_ext.pyi
+#  OUTPUT nanobind_example_ext.pyi  # sphinx does not seem to use a pyi file
+  OUTPUT _nanobind_example_ext_stub.py  # sphinx is happy with this one
   PYTHON_PATH $<TARGET_FILE_DIR:nanobind_example_ext>
   DEPENDS nanobind_example_ext
   MARKER_FILE py.typed
   )
 # fixme: why do I need to give the prefix build/cp312... ?
-install(FILES build/cp312-abi3-linux_x86_64/py.typed build/cp312-abi3-linux_x86_64/nanobind_example_ext.pyi DESTINATION nanobind_example)
+install(FILES build/cp312-abi3-linux_x86_64/py.typed build/cp312-abi3-linux_x86_64/_nanobind_example_ext_stub.py DESTINATION nanobind_example)
