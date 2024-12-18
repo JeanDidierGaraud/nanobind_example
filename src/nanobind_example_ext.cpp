@@ -27,7 +27,7 @@ Example:
 )")
       .def(nb::init<const std::string&>(), "name"_a="Titi")
       .def("speak", &Bird::speak, "The bird speaks.")                        // basic binding
-      .def("peep", &Bird::speak, "peep(text:str)->str \n\nThe bird peeps.")  // repeat prototype
+      .def("peep", &Bird::speak, "peep(text:str)->str\n\nThe bird peeps.")  // repeat prototype
       .def("tweet", &Bird::speak, "translation"_a, "The bird tweets.")       // named param
       ;
 }

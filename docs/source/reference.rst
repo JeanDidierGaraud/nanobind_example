@@ -57,11 +57,13 @@ Explicitly asking for the doc of a specific function works:
 .. autofunction:: nanobind_example.add
 
 
-In ``help(nanobind_example)``, the function appears in the DATA section (?!)::
+.. note::
 
-   DATA
-    add = <nanobind.nb_func object>
-        add(a: int, b: int) -> int
+   In ``help(nanobind_example)``, the function appears in the DATA section (?!)::
+
+     DATA
+      add = <nanobind.nb_func object>
+          add(a: int, b: int) -> int
 
 
 .. comment
