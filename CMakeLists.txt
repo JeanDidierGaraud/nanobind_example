@@ -68,5 +68,5 @@ nanobind_add_stub(
   DEPENDS nanobind_example_ext
   MARKER_FILE py.typed
   )
-# fixme: why do I need to give the prefix build/cp312... ?
-install(FILES build/cp312-abi3-linux_x86_64/py.typed build/cp312-abi3-linux_x86_64/_nanobind_example_ext_stub.py DESTINATION nanobind_example)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/py.typed ${CMAKE_CURRENT_BINARY_DIR}/_nanobind_example_ext_stub.py DESTINATION nanobind_example)
