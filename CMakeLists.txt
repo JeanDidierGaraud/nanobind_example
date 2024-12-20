@@ -69,4 +69,7 @@ nanobind_add_stub(
   MARKER_FILE py.typed
   )
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/py.typed ${CMAKE_CURRENT_BINARY_DIR}/_nanobind_example_ext_stub.py DESTINATION nanobind_example)
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/py.typed
+  ${CMAKE_CURRENT_BINARY_DIR}/_nanobind_example_ext_stub.py
+  DESTINATION nanobind_example)
